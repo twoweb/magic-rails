@@ -1,7 +1,7 @@
 magic-rails
 ===================
 
-For ruby ~> 1.9.3' 
+For ruby ~> 1.9.3
 
 magic.css for rails.
 https://github.com/twoweb/magic-rails
