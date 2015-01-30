@@ -22,7 +22,7 @@ Then run:
 bundle install
 ```
 
-Add application.css (Ruby on Rails):
+Add application.css.sass or application.css.scss (Ruby on Rails):
 
 ```
 @import magic.css
