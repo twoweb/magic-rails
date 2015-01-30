@@ -1,2 +1,28 @@
-# magic-rails
-gem for magic.css
+magic-rails
+===================
+
+magic.css for rails.
+https://github.com/twoweb/magic-rails
+
+
+Installation
+=======
+
+Add this extension to your Gemfile:
+
+```ruby
+gem "magic-rails"
+```
+
+Then run:
+
+```
+bundle install
+```
+
+Add application.css (Ruby on Rails):
+
+```
+@import magic.css
+```
+
