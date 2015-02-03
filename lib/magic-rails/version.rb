@@ -1,3 +1,5 @@
-module MagicRails
-  VERSION = '1.1.0'
+module Magic
+  module Rails
+    VERSION = "1.0.1"
+  end
 end

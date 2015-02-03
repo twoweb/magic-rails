@@ -1,18 +1,26 @@
-# Maintain your gem's version:
+# coding: utf-8
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
-# Describe your gem and declare its dependencies:
-Gem::Specification.new do |s|
-  s.name        = 'magic-rails'
-  s.version     = '1.0.0'
-  s.authors     = ['TwoWeb']
-  s.email       = ['dev@twoweb.com.br']
-  s.summary     = 'magic.css for rails'
-  s.description = 'gem magic.css for rails'
-  s.homepage    = 'https://github.com/twoweb/magic-rails'
-  s.license     = 'MIT'
+require File.expand_path('../lib/magic-rails/version', __FILE__)
 
-  s.files =  Dir["{lib/**/*.rb,README.rdoc,test/**/*.rb,*.gemspec}"]
-  s.require_paths = ['lib']
+Gem::Specification.new do |spec|
+  spec.name          = "magic-rails"
+  spec.version       = Magic::Rails::VERSION
+  spec.authors       = ["TwoWeb"]
+  spec.email         = ["dev@twoweb.com.br"]
+  spec.summary       = "gem magic.css"
+  spec.description   = "magic.css for rails"
+  spec.homepage      = "https://github.com/twoweb/magic-rails"
+  spec.license       = "MIT"
 
-  s.add_dependency 'rails'
+  spec.rubyforge_project = "magic-rails"
+
+  spec.files         = `git ls-files -z`.split("\x0")
+  spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
+  spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  spec.require_paths = ["lib"]
+
+  spec.add_development_dependency "bundler", "~> 1.7"
+  spec.add_development_dependency "rake", "~> 10.0"
 end
